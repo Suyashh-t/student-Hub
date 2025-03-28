@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Player | Suyash EduHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Modern Button Styles */
+        .modern-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: none;
+            margin: 0.5rem 0;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #6e8efb, #4a67d6);
+            color: white;
+            box-shadow: 0 4px 15px rgba(106, 142, 251, 0.4);
+        }
+        
+        .certificate-btn {
+            background: white;
+            color: #4a67d6;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .modern-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .modern-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Modern Description Card */
+        .modern-description h2,
+        .modern-syllabus h2 {
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .modern-description h2 i,
+        .modern-syllabus h2 i {
+            color: #4a67d6;
+            font-size: 1.3rem;
+        }
+        
+        .description-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #4a67d6;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        /* Modern Syllabus */
+        .syllabus-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .lesson-item {
+            padding: 1.2rem 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #f0f4f8;
+            transition: all 0.25s ease;
+        }
+        
+        .lesson-item:last-child {
+            border-bottom: none;
+        }
+        
+        .lesson-item:hover {
+            background: #f8fafc;
+            transform: translateX(8px);
+        }
+        
+        .lesson-item i {
+            color: #4a67d6;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .lesson-item:hover i {
+            transform: scale(1.1);
+            color: #3b53c4;
+        }
+        
+        .course-actions {
+            display: flex;
+            gap: 15px;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .course-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .modern-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .lesson-item {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="section-navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="./images/SUYASH EDUHUB 1.png" alt="Suyash EduHub" width="50%" height="auto">
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="course-hero">
+        <div class="container">
+            <h1 id="course-title">Course Title</h1>
+            <p class="course-meta">
+                <span><i class="fas fa-clock"></i> <span id="course-duration">6 Hours</span></span>
+                <span><i class="fas fa-video"></i> <span id="course-lessons">24 Lessons</span></span>
+            </p>
+        </div>
+    </div>
+
+    <main class="course-content">
+        <div class="container">
+            <div class="video-container">
+                <iframe id="course-video" width="100%" height="500" 
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+    
+            <!-- Modern Action Buttons -->
+            <div class="course-actions">
+                <button class="modern-btn download-btn">
+                    <i class="fas fa-cloud-download-alt"></i>
+                    <span>Download Resources</span>
+                </button>
+                <button class="modern-btn certificate-btn">
+                    <i class="fas fa-award"></i>
+                    <span>Get Certificate</span>
+                </button>
+            </div>
+    
+            <!-- Modern Course Description -->
+            <div class="modern-description">
+                <h2><i class="fas fa-info-circle"></i> About This Course</h2>
+                <div class="description-card">
+                    <p id="course-description"></p>
+                </div>
+            </div>
+    
+            <!-- Modern Syllabus -->
+            <div class="modern-syllabus">
+                <h2><i class="fas fa-list-ol"></i> Course Syllabus</h2>
+                <div class="syllabus-card" id="lesson-list">
+                    <!-- Lessons will be inserted by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/course-player.js"></script>
+</body>
+</html>
