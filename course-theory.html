@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Theory | Suyash EduHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .theory-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .theory-header {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(72, 187, 120, 0.3);
+        }
+        
+        .theory-content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            line-height: 1.8;
+            color: #4a5568;
+        }
+        
+        .theory-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .theory-section h2 {
+            color: #2d3748;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .theory-section h2 i {
+            color: #48bb78;
+        }
+        
+        .theory-section h3 {
+            color: #2d3748;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .code-block {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: monospace;
+            border-left: 3px solid #4a67d6;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .note-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.8rem 1.5rem;
+            background: #4a67d6;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #3b53c4;
+            transform: translateY(-2px);
+        }
+        
+        .theory-nav {
+            position: sticky;
+            top: 20px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .theory-nav h3 {
+            margin-top: 0;
+            color: #2d3748;
+        }
+        
+        .theory-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .theory-nav li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .theory-nav a {
+            text-decoration: none;
+            color: #4a5568;
+            transition: color 0.2s;
+        }
+        
+        .theory-nav a:hover {
+            color: #4a67d6;
+        }
+    </style>
+</head>
+<body>
+    <header class="section-navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="./images/student eduhub logo.png" alt="Student EduHub" width="10%" height="auto">
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="theory-container">
+        <div class="theory-header">
+            <h1>Advanced JavaScript Concepts</h1>
+            <p>Comprehensive Theory and Reference Materials</p>
+        </div>
+        
+        <div class="theory-content">
+            <div class="theory-nav">
+                <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">Course Overview</a></li>
+                    <li><a href="#closures">Closures and Scope</a></li>
+                    <li><a href="#prototypes">Prototypes and Inheritance</a></li>
+                    <li><a href="#async">Async Programming</a></li>
+                    <li><a href="#es6">ES6+ Features</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="theory-section" id="overview">
+                <h2><i class="fas fa-info-circle"></i> Course Overview</h2>
+                <p>This course covers advanced JavaScript concepts that are fundamental to becoming a proficient JavaScript developer. You'll learn about the core mechanisms that make JavaScript unique, including its execution context, prototype system, and asynchronous nature.</p>
+                
+                <div class="note-box">
+                    <strong><i class="fas fa-lightbulb"></i> Note:</strong> This material assumes basic familiarity with JavaScript syntax and programming concepts.
+                </div>
+            </div>
+            
+            <div class="theory-section" id="closures">
+                <h2><i class="fas fa-code"></i> Closures and Scope</h2>
+                
+                <h3>What is a Closure?</h3>
+                <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.</p>
+                
+                <div class="code-block">
+                    function outer() {<br>
+                    &nbsp;&nbsp;const outerVar = 'I am outside!';<br>
+                    <br>
+                    &nbsp;&nbsp;function inner() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(outerVar); // => "I am outside!"<br>
+                    &nbsp;&nbsp;}<br>
+                    <br>
+                    &nbsp;&nbsp;return inner;<br>
+                    }<br>
+                    <br>
+                    const innerFunc = outer();<br>
+                    innerFunc();
+                </div>
+                
+                <h3>Scope Chain</h3>
+                <p>JavaScript uses lexical scoping (static scoping), which means that the scope of a variable is determined by its position within the source code.</p>
+                
+                <h3>Practical Uses of Closures</h3>
+                <ul>
+                    <li>Data encapsulation and private variables</li>
+                    <li>Function factories</li>
+                    <li>Event handlers and callbacks</li>
+                    <li>Module pattern implementation</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section" id="prototypes">
+                <h2><i class="fas fa-project-diagram"></i> Prototypes and Inheritance</h2>
+                
+                <h3>Prototypal Inheritance</h3>
+                <p>JavaScript uses prototypal inheritance rather than classical inheritance. Every object has a private property which holds a link to another object called its prototype.</p>
+                
+                <div class="code-block">
+                    // Constructor function<br>
+                    function Person(name) {<br>
+                    &nbsp;&nbsp;this.name = name;<br>
+                    }<br>
+                    <br>
+                    // Adding method to prototype<br>
+                    Person.prototype.greet = function() {<br>
+                    &nbsp;&nbsp;return `Hello, my name is ${this.name}`;<br>
+                    };<br>
+                    <br>
+                    const john = new Person('John');<br>
+                    console.log(john.greet()); // => "Hello, my name is John"
+                </div>
+                
+                <h3>The Prototype Chain</h3>
+                <p>When you try to access a property of an object, JavaScript will first look for the property on the object itself. If it's not found, it will look at the object's prototype, then the prototype's prototype, and so on until it finds the property or reaches the end of the prototype chain.</p>
+                
+                <h3>ES6 Classes</h3>
+                <p>ES6 introduced the <code>class</code> syntax, which is syntactic sugar over JavaScript's existing prototype-based inheritance.</p>
+            </div>
+            
+            <div class="theory-section" id="async">
+                <h2><i class="fas fa-sync-alt"></i> Asynchronous Programming</h2>
+                
+                <h3>Callbacks</h3>
+                <p>The traditional way to handle asynchronous operations in JavaScript is using callbacks - functions passed as arguments to other functions to be executed later.</p>
+                
+                <div class="code-block">
+                    function fetchData(callback) {<br>
+                    &nbsp;&nbsp;setTimeout(() => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;callback('Data received');<br>
+                    &nbsp;&nbsp;}, 1000);<br>
+                    }<br>
+                    <br>
+                    fetchData((data) => {<br>
+                    &nbsp;&nbsp;console.log(data); // => "Data received" (after 1 second)<br>
+                    });
+                </div>
+                
+                <h3>Promises</h3>
+                <p>Promises represent the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
+                
+                <div class="code-block">
+                    function fetchData() {<br>
+                    &nbsp;&nbsp;return new Promise((resolve) => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;setTimeout(() => resolve('Data received'), 1000);<br>
+                    &nbsp;&nbsp;});<br>
+                    }<br>
+                    <br>
+                    fetchData()<br>
+                    &nbsp;&nbsp;.then(data => console.log(data))<br>
+                    &nbsp;&nbsp;.catch(error => console.error(error));
+                </div>
+                
+                <h3>Async/Await</h3>
+                <p>Async functions enable you to write promise-based code as if it were synchronous.</p>
+                
+                <div class="code-block">
+                    async function getData() {<br>
+                    &nbsp;&nbsp;try {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;const data = await fetchData();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(data);<br>
+                    &nbsp;&nbsp;} catch (error) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.error(error);<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </div>
+            </div>
+            
+            <div class="theory-section" id="es6">
+                <h2><i class="fas fa-star"></i> ES6+ Features</h2>
+                
+                <h3>Arrow Functions</h3>
+                <p>Arrow functions provide a concise syntax for writing function expressions and lexically bind the <code>this</code> value.</p>
+                
+                <h3>Template Literals</h3>
+                <p>Template literals allow embedded expressions and multi-line strings.</p>
+                
+                <h3>Destructuring</h3>
+                <p>Destructuring allows unpacking values from arrays or properties from objects into distinct variables.</p>
+                
+                <h3>Modules</h3>
+                <p>ES6 modules provide a way to organize code into reusable, maintainable pieces.</p>
+            </div>
+            
+            <div class="theory-section" id="resources">
+                <h2><i class="fas fa-book"></i> Additional Resources</h2>
+                
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN JavaScript Documentation</a></li>
+                    <li><a href="https://eloquentjavascript.net/" target="_blank">Eloquent JavaScript (Free Online Book)</a></li>
+                    <li><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don't Know JS (Book Series)</a></li>
+                </ul>
+            </div>
+            
+            <a href="course-player.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Course Player
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Highlight current section in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.theory-section');
+            const navLinks = document.querySelectorAll('.theory-nav a');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                        link.style.color = '#4a67d6';
+                        link.style.fontWeight = '600';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

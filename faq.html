@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs | Student EduHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(to right, #4a84bd, #354ea5);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2rem 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .faq-item {
+            background: white;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .faq-question {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 0.5rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<!-- start Navbar -->
+<header class="section-navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="index.html">
+                <img src="./images/STUDENT EDUHUB.png" alt="Student EduHub" width="50%" height="auto">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">contact</a>
+                </li>
+                <!-- Add this new login button -->
+                <li class="nav-item">
+                    <a class="nav-link login-btn" href="login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+        
+<!-- end Navbar -->
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question">What courses do you offer? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">We offer courses on Data Structures, Web Development, Machine Learning, Cybersecurity, and AI.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is there a certificate for each course? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes! You will receive a certificate upon successful course completion.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Are the courses free or paid? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">We offer both free and premium courses. Check course details for pricing.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How can I contact support? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">You can reach us via email at support@studenteduhub.com or through our contact page.</div>
+        </div>
+    </div>
+
+<!-- start contact home section -->
+
+<div class="section-contact--homepage" id="section-contact--homepage">
+    <div class="container grid grid-two--cols">
+        <div class="contact-content">
+            <h2 class="contact-title">Let's revolutionaize the way you study</h2>
+            <p>Join our free bootcapms to know us better</p>
+            <div class="btn">
+                <a href="login.html">Start now <i class="fa-solid fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="contact-image">
+            <img src="./images/main.png" alt="A guy doing html coding">
+        </div>
+    </div>
+</div>
+
+<!-- End contact home section -->
+
+    <!-- start footer section -->
+
+    <footer>
+        <div class="container grid grid-four--cols">
+            <div class="footer-1--div">
+                <div class="logo brand">
+                    <a href="index.html" class="footer-subheading">Student EduHub</a>
+                        <p>Let's revolutionize the way you study with Student Eduhub</p>
+                </div>
+                <div class="social-footer--icons">
+                    <a href="https://www.linkedin.com/in/suyash-thanage-01432b33b/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://studio.youtube.com/channel/UCE94S3_AUSEWUZKc8ZH78Jg/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D" target="_blank"><i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/suyashh_t18/" target="_blank"><i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            
+            
+            <div class="footer-3--div">
+                <p class="footer-subheading"> Links </p>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>© 2025 Student EduHub. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+<!-- End footer section -->
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                let answer = item.querySelector('.faq-answer');
+                answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

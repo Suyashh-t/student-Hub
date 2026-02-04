@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const lessonItem = document.createElement('div');
                 lessonItem.className = 'lesson-item';
                 lessonItem.innerHTML = `
-                    <i class="fas fa-play-circle"></i>
+
                     <span>${lesson}</span>
                 `;
                 lessonList.appendChild(lessonItem);
